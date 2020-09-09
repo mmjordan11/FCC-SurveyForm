@@ -2,13 +2,16 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="reset.css"></link>
   <link rel="stylesheet" type="text/css" href="mystyle.css"></link>
-  <title>Form Skills Survey</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">  <title>Form Skills Survey</title>
 </head>
 <body>
   <div id="background">
-    <h1 id="title">Feedback On Matt's Form Skills</h1>
-    <p id="description">Thank you for taking the time to help me improve my html form skills</p>
+    <header>
+      <h1 id="title">Feedback On Matt's Form Skills</h1>
+      <p id="description">Thank you for taking the time to help me improve my html form skills</p>
+    </header>
     <div class="box">
       <form id="survey-form">
         <div class="form-item">
@@ -20,14 +23,15 @@
           <input id="email" class="input text-input" type="email" name="email" placeholder="Enter your Email" required>
         </div>
         <div class="form-item">
-          <label id="number-label" class="form-labels" for="number">Years Coding (optional)</label>
-          <input id="number" class="input" type="number" name="experience" placeholder="Years Coding" min="0" max="100" value="1">
+          <label id="number-label" class="form-labels" for="number">Years Coding <span class="secondary-text">(optional)</span></label>
+          <input id="number" class="input" type="number" name="experience" placeholder="Years Coding" min="0" max="100" value="">
         </div>
         <div class="form-item">
           <label id="role-label" class="form-labels" for="role">Which option best describes your current role?</label>
           <select id="dropdown" name="role" required>
-            <option value="none" disabled selected>Select Current Role</option>
+            <option value="null" disabled selected>Select Current Role</option>
             <option value="student">Student</option>
+            <option value="part time learner">Part Time Learner</option>
             <option value="full time learner">Full Time Learner</option>
             <option value="full time job">Full Time Job</option>
             <option value="prefer not to say">Prefer Not To Say</option>
@@ -38,47 +42,49 @@
             <legend>How do you feel about my web form?</legend>
             <label for="like">
               <input id="like" type="radio" name="rating" value="like" checked>Excellent! Created by a true gentleman and scholar.
-            </label><br>
+            </label>
             <label for="dislike">
-              <input id="dislike" type="radio" name="rating" value="dislike">Piss poor! What a heap of rubbish.
-            </label><br>
+              <input id="dislike" type="radio" name="rating" value="dislike">Egads! What a heap of rubbish.
+            </label>
             <label for="neutral">
               <input id="neutral" type="radio" name="rating" value="neutral">I don't know... It's just a basic webpage...
             </label>
           </fieldset>
+        </div>
         <div class="form-item">
           <fieldset id="checkboxes">
-            <legend>What aspects could I improve upon?</legend>
+            <legend>What aspects could I improve upon? <span class="secondary-text">(Check all that apply)</span></legend>
             <label for="design">
               <input id="design" type="checkbox" name="improvements" value="design">Design
-            </label><br>
+            </label>
             <label for="html">
               <input id="html" type="checkbox" name="improvements" value="html">HTML
-            </label><br>
+            </label>
             <label for="css">
               <input id="css" type="checkbox" name="improvements" value="css">CSS
-            </label><br>
+            </label>
             <label for="form">
               <input id="form" type="checkbox" name="improvements" value="form">Form Functions
-            </label><br>
+            </label>
             <label for="accessibility">
               <input id="accessibility" type="checkbox" name="improvements" value="accessibility">Accesibility
-            </label><br>
+            </label>
             <label for="responsive">
               <input id="responsive" type="checkbox" name="improvements" value="responsive">Responsive Layout
-            </label><br>
+            </label>
             <label for="nothing">
               <input id="nothing" type="checkbox" name="improvements" value="nothing" disabled>Nothing. It's perfect!
             </label>
           </fieldset>
         </div>
         <div class="form-item">
-          <label for="comments">Any comments or suggestions?</label><br>
+          <label for="comments">Any comments or suggestions?</label>
           <textarea id="comments" maxlength="1000" placeholder="Enter your comment here..."></textarea>
         </div>
-        <div class="submit">
-          <button id="submit" type="submit">Submit Responses</button>
+        <div class="form-item">
+          <button id="submit" type="submit">Submit</button>
         </div>
+      </form>
     </div>
   </div>
   <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
